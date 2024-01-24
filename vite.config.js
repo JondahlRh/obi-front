@@ -6,7 +6,11 @@ export default defineConfig(({ mode }) => {
   return {
     plugins: [react()],
     server: {
+      host: "0.0.0.0",
       port: env.VITE_PORT,
+      watch: {
+        usePolling: true,
+      },
     },
     resolve: {
       alias: {
